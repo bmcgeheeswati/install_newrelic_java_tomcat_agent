@@ -21,9 +21,9 @@ bmcgeheeswati/newrelic_java_tomcat_agent:
     - echo "#########################"
     - cat $CATALINA_HOME/newrelic/newrelic.yml
     - cd $CATALINA_HOME/newrelic
-    #- sudo java -jar newrelic.jar install
-    #- sudo $CATALINA_HOME/bin/catalina.sh stop
-    #- sudo $CATALINA_HOME/bin/catalina.sh start    
+    - sudo java -jar newrelic.jar install
+    - sudo $CATALINA_HOME/bin/catalina.sh stop
+    - sudo $CATALINA_HOME/bin/catalina.sh start    
   PostInstall:
     - publicip=$(curl -s ident.me)
     - echo "Public IP $publicip"
