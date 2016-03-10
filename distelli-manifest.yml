@@ -16,8 +16,8 @@ bmcgeheeswati/newrelic_java_tomcat_agent:
     - echo "($NR_INSTALL_KEY)"
     - echo "#########################"
     - cat $CATALINA_HOME/newrelic/newrelic.yml
-    - sudo sed -i "s|license_key\: '<%= license_key %>'|license_key: '$NR_INSTALL_KEY'|g" $CATALINA_HOME/newrelic/newrelic.yml
-    - sudo sed -i "s|app_name\: My Application|app_name: $NR_APP_NAME|g" $CATALINA_HOME/newrelic/newrelic.yml
+    - sudo sed -i "s|'<%= license_key %>'|'$NR_INSTALL_KEY'|g" $CATALINA_HOME/newrelic/newrelic.yml
+    - sudo sed -i "s|My Application|$NR_APP_NAME|g" $CATALINA_HOME/newrelic/newrelic.yml
     - echo "#########################"
     - cat $CATALINA_HOME/newrelic/newrelic.yml
     - cd $CATALINA_HOME/newrelic
